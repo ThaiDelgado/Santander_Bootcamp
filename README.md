@@ -36,4 +36,5 @@ Com inicio em Julho e previsão de conclusão em Setembro/21.
 Thaissa Delgado.
 
 https://www.linkedin.com/in/thaissadelgado/
+
 https://www.instagram.com/thaidelgado/
