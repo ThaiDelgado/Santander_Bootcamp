@@ -12,8 +12,8 @@ CREATE TABLE IF NOT EXISTS agencia(
 	nome VARCHAR(80) NOT NULL,
 	ativo BOOLEAN NOT NULL DEFAULT TRUE,
 	data_criacao TIMESTAMP NOT NULL DEFAULT NOW(),
-	PRIMARY KEY (numero_banco, numero),                --colocar como parâmetro o que não pode se repetir na tabela
-	FOREIGN KEY (numero_banco) REFERENCES banco (numero)
+	PRIMARY KEY (banco_numero, numero),                --colocar como parâmetro o que não pode se repetir na tabela
+	FOREIGN KEY (banco_numero) REFERENCES banco (numero)
 )
 
 CREATE TABLE IF NOT EXISTS cliente(  --tabela criada apenas para dados dos clientes
@@ -32,9 +32,9 @@ CREATE TABLE IF NOT EXISTS conta_corrente(
 	digito SMALLINT NOT NULL,
 	ativo BOOLEAN NOT NULL DEFAULT TRUE,
 	data_criacao TIMESTAMP NOT NULL DEFAULT NOW(),
-	PRIMARY KEY (numero_banco, numero_agencia, numero_cliente, numero, digito),
-	FOREIGN KEY (numero_banco, numero_agencia) REFERENCES agencia (numero_banco, numero),
-	FOREIGN KEY (numero_cliente) REFERENCES cliente (numero)
+	PRIMARY KEY (banco_numero, agencia_numero, cliente_numero, numero, digito),
+	FOREIGN KEY (banco_numero, agencia_numero) REFERENCES agencia (banco_numero, numero),
+	FOREIGN KEY (cliente_numero) REFERENCES cliente (numero)
 )
 
 CREATE TABLE IF NOT EXISTS tipo_transacao(
@@ -44,17 +44,17 @@ CREATE TABLE IF NOT EXISTS tipo_transacao(
 	data_criacao TIMESTAMP NOT NULL DEFAULT NOW()
 )
 
-CREATE TABLE IF NOT EXISTS cliente_transacao( --estabela tem relação com as tabelas conta_corrente e tipo_transaçaõ.
+CREATE TABLE IF NOT EXISTS cliente_transacoes( --estabela tem relação com as tabelas conta_corrente e tipo_transaçaõ.
 	id BIGSERIAL NOT NULL PRIMARY KEY,
 	banco_numero INTEGER NOT NULL,
 	agencia_numero INTEGER NOT NULL,
+	conta_corrente_numero BIGINT NOT NULL,
+	conta_corrente_digito SMALLINT NOT NULL,
 	cliente_numero BIGINT NOT NULL,
-	numero_conta_corrente BIGINT NOT NULL,
-	numero_conta_digito SMALLINT NOT NULL,
 	tipo_transacao_id SMALLINT NOT NULL,
 	valor NUMERIC (15,2) NOT NULL,
 	data_criacao TIMESTAMP NOT NULL DEFAULT NOW(),
-	FOREIGN KEY (numero_banco, numero_agencia, numero_cliente, numero_conta_corrente, numero_conta_digito) REFERENCES conta_corrente (numero_banco, numero_agencia, numero_cliente, numero, digito)
+	FOREIGN KEY (banco_numero, agencia_numero, conta_corrente_numero, conta_corrente_digito) REFERENCES conta_corrente (banco_numero, agencia_numero, numero, digito, cliente_numero)
 )
 
 
