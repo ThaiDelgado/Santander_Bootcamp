@@ -2206,7 +2206,7 @@ INSERT INTO cliente_transacoes (banco_numero,agencia_numero,conta_corrente_numer
 INSERT INTO cliente_transacoes (banco_numero,agencia_numero,conta_corrente_numero,conta_corrente_digito,cliente_numero,tipo_transacao_id,valor) VALUES (1,27,153273940,8,365,2, 1.30);
 INSERT INTO cliente_transacoes (banco_numero,agencia_numero,conta_corrente_numero,conta_corrente_digito,cliente_numero,tipo_transacao_id,valor) VALUES (247,7,397059706,0,11,2, 1.46);
 INSERT INTO cliente_transacoes (banco_numero,agencia_numero,conta_corrente_numero,conta_corrente_digito,cliente_numero,tipo_transacao_id,valor) VALUES (33,22,300804522,7,420,2, 1.84);
-INSERT INTO cliente_transacoes (banco_numero,agencia_numero,conta_corrente_numero,conta_corrente_digito,cliente_numero,tipo_tao_id,valor) VALUES (104,66,13854824,5,229,2, 2.18);
+INSERT INTO cliente_transacoes (banco_numero,agencia_numero,conta_corrente_numero,conta_corrente_digito,cliente_numero,tipo_transacao_id,valor) VALUES (104,66,13854824,5,229,2, 2.18);
 INSERT INTO cliente_transacoes (banco_numero,agencia_numero,conta_corrente_numero,conta_corrente_digito,cliente_numero,tipo_transacao_id,valor) VALUES (104,89,202584093,3,363,2, 2.41);
 INSERT INTO cliente_transacoes (banco_numero,agencia_numero,conta_corrente_numero,conta_corrente_digito,cliente_numero,tipo_transacao_id,valor) VALUES (247,16,308257129,6,120,2, 2.52);
 INSERT INTO cliente_transacoes (banco_numero,agencia_numero,conta_corrente_numero,conta_corrente_digito,cliente_numero,tipo_transacao_id,valor) VALUES (104,77,315515906,2,312,2, 2.85);
