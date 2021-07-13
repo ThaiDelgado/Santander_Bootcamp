@@ -2,8 +2,7 @@
 Fullstack Developer
 
 
-Estudos e desafios no desenvolvimento de aplicações back-end utilizando Java, 
-criando aplicações ainda mais completas integradas ao banco de dados. 
+Estudos e desafios no desenvolvimento de aplicações back-end utilizando Java, e ainda mais completas integradas ao banco de dados. 
 Além de explorar o front-end com Angular.
 
 ### Tecnologias:
