@@ -8,7 +8,7 @@ Além de explorar o front-end com Angular.
 ### Tecnologias:
 
 
-- [SQL](_____________)
+- [PostgreSQL](_____________)
 - [JAVA](___________)
 - [SPRING BOOT](_____________)
 - [HTML](____________)
