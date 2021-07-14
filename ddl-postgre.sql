@@ -94,7 +94,7 @@ CREATE TABLE IF NOT EXISTS cliente_transacoes( --Foi criada uma nova tabela clie
 	data_criacao TIMESTAMP NOT NULL DEFAULT NOW(),
 	FOREIGN KEY (banco_numero, agencia_numero, conta_corrente_numero, conta_corrente_digito, cliente_numero) REFERENCES conta_corrente(banco_numero, agencia_numero, numero, digito, cliente_numero)
 
-)
+);
 
 
 
