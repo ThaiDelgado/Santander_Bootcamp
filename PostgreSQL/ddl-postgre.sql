@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS banco(
 	PRIMARY KEY (numero)
 )
 
-ALTER TABLE agencia RENAME numero_banco TO banco_numero; 
+ALTER TABLE agencia RENAME numero_banco TO banco_numero; --renomeando coluna
 
 ALTER TABLE agencia ALTER COLUMN nome TYPE VARCHAR (80);
 
